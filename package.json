@@ -1,0 +1,52 @@
+{
+  "name": "tou-rates",
+  "version": "0.1.0",
+  "description": "Normalize US residential time-of-use electricity rates (OpenEI Utility Rate Database) into prices you can schedule against.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "electricity",
+    "tariff",
+    "time-of-use",
+    "tou",
+    "openei",
+    "urdb",
+    "energy"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Darthh/tou-rates.git"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "dependencies": {
+    "luxon": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.7.6",
+    "@types/node": "^22.19.0",
+    "typescript": "6.0.3",
+    "vitest": "5.0.5"
+  }
+}
