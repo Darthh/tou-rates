@@ -15,7 +15,7 @@ This project is published as an MIT-licensed [GitHub repository](https://github.
 
 ```bash
 # Install from the public source repository; prepare builds the ESM output.
-npm install github:Darthh/tou-rates
+npm install git+https://github.com/Darthh/tou-rates.git
 ```
 
 Or clone the standalone project and run `npm ci && npm test && npm run build`.
